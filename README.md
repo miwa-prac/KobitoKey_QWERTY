@@ -11,17 +11,18 @@
 | 1 | Q W E R T | Y U I O P |
 | 2 | A S D F G | H J K L , |
 | 3 | Z X C V B | N M 左クリック 右クリック 中クリック |
-| 4 | Win かな 英数 Backspace Space/NUM | Enter/Shift Enter/Ctrl Space/ARROW . Esc/Alt |
+| 4 | Win Backspace Space/NUM Enter/Shift Enter/Ctrl | Space/ARROW 未割当 未割当 . Esc/Alt |
 
-「タップ/ホールド」の順。iPadモードではWin→Command、Enter/Ctrl→Command、Space/ARROW→iPad用矢印へ切替。
+「タップ/ホールド」の順。レイヤー0の親指キーを左詰めし、各キーのLT・Mod-Tapをそのまま維持。iPadの単独キー配置は今回変更していません。
 
 ## 操作
 
 - Lをホールド: 右トラックボールをスクロールへ。左トラックボールは常時スクロールの既存設定を維持。
-- Z＋X: Tab、C＋V: _、H＋J: -、.＋H: !、N＋M: @。
-- 数字レイヤー中はZ位置＋X位置: =、C位置＋V位置: #、H位置＋J位置: _。
-- E＋Rをホールド: FUNCTION（F1〜F12）。その間H位置＋J位置: F13。
-- 左下のWin・かな・英数を同時ホールド: SETTINGS。Y〜P位置でBluetooth 0〜4、最下段の.位置でbootloader、右端で全接続解除、3段目右端で現在の接続解除。
+- 小人キー標準のD＋F: 英数、J＋K: かな。
+- F＋G: .、V＋B: _、Y＋U: -、H＋J: !、N＋M: @。
+- レイヤー1の右手3列目・最下段（位置37）: Tab。Z＋Xのコンボは削除。
+- 数字レイヤー中はC位置＋V位置: #。
+- E＋RのFUNCTIONコンボ、左下3キーのSETTINGSコンボは削除。レイヤー1・6・12・13へのコンボ入口はありません。
 - Q＋W: Bluetooth 0 / Windows、W＋E: Bluetooth 1 / Windows、Q＋W＋E: Bluetooth 2 / iPad。
 - 右トラックボール操作: 自動MOUSE（4）、5秒滞留。マウスボタンの位置27〜29はレイヤー維持対象。
 
