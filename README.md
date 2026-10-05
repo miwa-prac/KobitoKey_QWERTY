@@ -11,9 +11,9 @@
 | 1 | Q W E R T | Y U I O P |
 | 2 | A S D F G | H J K L , |
 | 3 | Z X C V B | N M 左クリック 右クリック 中クリック |
-| 4 | Win Backspace Space/NUM Enter/Shift Enter/Ctrl | Space/ARROW 未割当 未割当 . Esc/Alt |
+| 4 | Win 未割当 Backspace Space/NUM Enter/Shift | . 未割当 Enter/Ctrl Space/ARROW Esc/Alt |
 
-「タップ/ホールド」の順。レイヤー0の親指キーを左詰めし、各キーのLT・Mod-Tapをそのまま維持。iPadの単独キー配置は今回変更していません。
+「タップ/ホールド」の順。レイヤー0の左右とも最下段2列目を未割当にし、3〜5列目に親指キーを配置。各キーのLT・Mod-Tapをそのまま維持。iPadの単独キー配置は今回変更していません。
 
 ## 操作
 
