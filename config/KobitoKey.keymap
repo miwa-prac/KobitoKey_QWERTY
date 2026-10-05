@@ -12,33 +12,21 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_tab {
-            timeout-ms = <50>;
-            key-positions = <20 21>;
-            bindings = <&kp TAB>;
-            layers = <0 8>;
-        };
 
         combo_underscore {
             timeout-ms = <50>;
-            key-positions = <22 23>;
+            key-positions = <23 24>;
             bindings = <&kp UNDER>;
             layers = <0 8>;
         };
 
         combo_minus {
             timeout-ms = <50>;
-            key-positions = <15 16>;
+            key-positions = <5 6>;
             bindings = <&kp MINUS>;
             layers = <0 8>;
         };
 
-        combo_number_equal {
-            timeout-ms = <50>;
-            key-positions = <20 21>;
-            bindings = <&kp EQUAL>;
-            layers = <2 10>;
-        };
 
         combo_number_hash {
             timeout-ms = <50>;
@@ -47,45 +35,27 @@
             layers = <2 10>;
         };
 
-        combo_number_under {
-            timeout-ms = <50>;
-            key-positions = <15 16>;
-            bindings = <&kp UNDERSCORE>;
-            layers = <2 10>;
-        };
 
-        combo_function_f13 {
-            timeout-ms = <50>;
-            key-positions = <15 16>;
-            bindings = <&kp F13>;
-            layers = <1 12>;
-        };
 
-        combo_settings {
-            timeout-ms = <50>;
-            key-positions = <30 31 32>;
-            bindings = <&mo 6>;
-            layers = <0>;
-        };
 
-        combo_function_win {
-            timeout-ms = <50>;
-            key-positions = <2 3>;
-            bindings = <&mo 1>;
-            layers = <0>;
-        };
-        combo_function_ipad {
-            timeout-ms = <50>;
-            key-positions = <2 3>;
-            bindings = <&mo 12>;
-            layers = <8>;
-        };
 
-        combo_settings_ipad {
+        combo_eisu {
             timeout-ms = <50>;
-            key-positions = <30 31 32>;
-            bindings = <&mo 13>;
-            layers = <8>;
+            key-positions = <12 13>;
+            bindings = <&kp LANG2>;
+            layers = <0 8>;
+        };
+        combo_kana {
+            timeout-ms = <50>;
+            key-positions = <16 17>;
+            bindings = <&kp LANG1>;
+            layers = <0 8>;
+        };
+        combo_dot {
+            timeout-ms = <50>;
+            key-positions = <13 14>;
+            bindings = <&kp DOT>;
+            layers = <0 8>;
         };
         connect0 {
             bindings = <&connect_to_layer_0>;
@@ -104,7 +74,7 @@
 
         exclamation {
             bindings = <&kp EXCL>;
-            key-positions = <38 15>;
+            key-positions = <15 16>;
             layers = <0 8>;
         };
 
@@ -158,7 +128,7 @@
 &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P
 &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &lt 5 L  &kp COMMA
 &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &mkp MB1  &mkp MB2  &mkp MB3
-&kp LEFT_WIN  &kp LANGUAGE_1  &kp LANGUAGE_2  &kp BACKSPACE  &lt 2 SPACE  &mt LEFT_SHIFT ENTER  &mt LEFT_CONTROL ENTER  &lt 3 SPACE  &kp DOT  &mt LEFT_ALT ESCAPE
+&kp LEFT_WIN  &kp BACKSPACE  &lt 2 SPACE  &mt LEFT_SHIFT ENTER  &mt LEFT_CONTROL ENTER  &lt 3 SPACE  &none  &none  &kp DOT  &mt LEFT_ALT ESCAPE
             >;
         };
 
@@ -168,7 +138,7 @@
 &trans  &trans  &trans  &trans  &trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
 &trans  &trans  &trans  &trans  &trans  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp F11
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp F12
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp TAB  &trans  &kp F12
             >;
         };
 
