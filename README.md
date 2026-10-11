@@ -24,12 +24,14 @@
 - 数字レイヤー中はC位置＋V位置: #。
 - E＋RのFUNCTIONコンボ、左下3キーのSETTINGSコンボは削除。レイヤー1・6・12・13へのコンボ入口はありません。
 - Q＋W: Bluetooth 0 / Windows、W＋E: Bluetooth 1 / Windows、Q＋W＋E: Bluetooth 2 / iPad。
-- 右トラックボール操作: 自動MOUSE（4）、5秒滞留。マウスボタンの位置27〜29はレイヤー維持対象。
+- 右トラックボール操作: WIN（0）からAUTO_MOUSE（4）、IPAD（8）からIPAD_AUTO_MOUSE（14）へ自動切替。操作後5秒滞留。キー入力後350msは誤作動防止のため切替を抑制。
+- AUTO_MOUSE: U/I/O位置に左/中/右クリック。最下段は左Shift・GUI・Alt、右Altを配置し、位置34・38でデフォルトに戻る。クリック・修飾キーでマウスレイヤーを維持。
+- 左トラックボールは従来どおりスクロール。数字・矢印・スクロール中は自動マウス切替を行わない。
 
 ## レイヤー
 
-0 WIN、1 FUNCTION、2 NUM、3 ARROW、4 MOUSE、5 SCROLL、6 SETTINGS、7 RESERVED、8 IPAD、9 IPAD_ARROW。
-10〜13はiPadモードで下位レイヤーが遮られるのを防ぐNUM・SCROLL・FUNCTION・SETTINGSの複製。
+0 WIN、1 FUNCTION、2 NUM、3 ARROW、4 AUTO_MOUSE、5 SCROLL、6 SETTINGS、7 RESERVED、8 IPAD、9 IPAD_ARROW。
+10〜13はiPadモードで下位レイヤーが遮られるのを防ぐNUM・SCROLL・FUNCTION・SETTINGSの複製。14はIPAD_AUTO_MOUSE。
 
 roBaのエンコーダ操作は小人キーにエンコーダがないため移植していません。Layer-Tapのrequire-prior-idle-msは0にして、連続操作でホールドが無視される条件を外しています。
 
