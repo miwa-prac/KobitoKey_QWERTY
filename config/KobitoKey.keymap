@@ -163,12 +163,12 @@
         };
 
         MOUSE {
-            label = "MOUSE";
+            label = "AUTO_MOUSE";
             bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp LSHFT  &trans  &kp LGUI  &kp LALT  &to 0  &trans  &trans  &trans  &to 0  &kp RALT
             >;
         };
 
@@ -257,6 +257,14 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &bootloader  &bt BT_CLR_ALL
             >;
         };
+        auto_mouse_ipad {
+            label = "IPAD_AUTO_MOUSE";
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp LSHFT  &trans  &kp LGUI  &kp LALT  &to 8  &trans  &trans  &trans  &to 8  &kp RALT
+            >;
+        };
     };
-
 };
