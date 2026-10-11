@@ -145,10 +145,10 @@
         NUM {
             label = "NUM";
             bindings = <
-&kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp AMPERSAND  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp DOLLAR  &kp BACKSLASH
-&kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp PERCENT  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LESS_THAN  &kp GREATER_THAN
-&trans  &kp MINUS  &kp KP_PLUS  &kp ASTERISK  &kp SLASH  &kp QUESTION  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES
-&trans  &trans  &trans  &trans  &trans  &trans  &kp COLON  &kp SEMICOLON  &kp DOT  &kp PIPE
+&kp N0  &kp N1  &kp N2  &kp N3  &trans  &kp AMPERSAND  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp DOLLAR  &kp BACKSLASH
+&kp EQUAL  &kp N4  &kp N5  &kp N6  &trans  &kp PERCENT  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LESS_THAN  &kp GREATER_THAN
+&trans  &kp N7  &kp N8  &kp N9  &trans  &kp QUESTION  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES
+&trans  &trans  &trans  &kp LSHFT  &trans  &trans  &kp COLON  &kp SEMICOLON  &kp DOT  &kp PIPE
             >;
         };
 
@@ -224,10 +224,10 @@
         ipad_num {
             label = "IPAD_NUM";
             bindings = <
-&kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp AMPERSAND  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp DOLLAR  &kp BACKSLASH
-&kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp PERCENT  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LESS_THAN  &kp GREATER_THAN
-&trans  &kp MINUS  &kp KP_PLUS  &kp ASTERISK  &kp SLASH  &kp QUESTION  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES
-&trans  &trans  &trans  &trans  &trans  &trans  &kp COLON  &kp SEMICOLON  &kp DOT  &kp PIPE
+&kp N0  &kp N1  &kp N2  &kp N3  &trans  &kp AMPERSAND  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp DOLLAR  &kp BACKSLASH
+&kp EQUAL  &kp N4  &kp N5  &kp N6  &trans  &kp PERCENT  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LESS_THAN  &kp GREATER_THAN
+&trans  &kp N7  &kp N8  &kp N9  &trans  &kp QUESTION  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES
+&trans  &trans  &trans  &kp LSHFT  &trans  &trans  &kp COLON  &kp SEMICOLON  &kp DOT  &kp PIPE
             >;
         };
         ipad_scroll {
