@@ -7,26 +7,9 @@
 
 &lt { require-prior-idle-ms = <0>; };
 
-
 / {
     combos {
         compatible = "zmk,combos";
-
-
-        combo_underscore {
-            timeout-ms = <50>;
-            key-positions = <23 24>;
-            bindings = <&kp UNDER>;
-            layers = <0 8>;
-        };
-
-        combo_minus {
-            timeout-ms = <50>;
-            key-positions = <5 6>;
-            bindings = <&kp MINUS>;
-            layers = <0 8>;
-        };
-
 
         combo_number_hash {
             timeout-ms = <50>;
@@ -35,28 +18,20 @@
             layers = <2 10>;
         };
 
-
-
-
-
         combo_eisu {
             timeout-ms = <50>;
             key-positions = <12 13>;
             bindings = <&kp LANG2>;
             layers = <0 8>;
         };
+
         combo_kana {
             timeout-ms = <50>;
             key-positions = <16 17>;
             bindings = <&kp LANG1>;
             layers = <0 8>;
         };
-        combo_dot {
-            timeout-ms = <50>;
-            key-positions = <13 14>;
-            bindings = <&kp DOT>;
-            layers = <0 8>;
-        };
+
         connect0 {
             bindings = <&connect_to_layer_0>;
             key-positions = <0 1>;
@@ -125,19 +100,19 @@
         default_layer_win {
             label = "WIN";
             bindings = <
-&kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P
-&kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &lt 5 L  &kp COMMA
-&kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &none  &none  &none
-&kp LEFT_WIN  &none  &kp BACKSPACE  &lt 2 SPACE  &mt LEFT_SHIFT ENTER  &mt LEFT_CONTROL ENTER  &lt 3 SPACE  &kp TAB  &none  &mt LEFT_ALT ESCAPE
+&kp Q         &kp W  &kp E          &kp R        &kp T                 &kp Y                   &kp U        &kp I      &kp O    &kp P
+&kp A         &kp S  &kp D          &kp F        &kp G                 &kp H                   &kp J        &kp K      &lt 5 L  &kp MINUS
+&kp Z         &kp X  &kp C          &kp V        &kp B                 &kp N                   &kp M        &kp COMMA  &kp DOT  &kp UNDERSCORE
+&kp LEFT_WIN  &none  &kp BACKSPACE  &lt 2 SPACE  &mt LEFT_SHIFT ENTER  &mt LEFT_CONTROL ENTER  &lt 3 SPACE  &kp TAB    &none    &mt LEFT_ALT ESCAPE
             >;
         };
 
         FUNCTION {
             label = "FUNCTION";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
-&trans  &trans  &trans  &trans  &trans  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp F11
+&trans  &trans  &trans  &trans  &trans  &kp F1  &kp F2  &kp F3   &kp F4  &kp F5
+&trans  &trans  &trans  &trans  &trans  &kp F6  &kp F7  &kp F8   &kp F9  &kp F10
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans  &kp F11
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp TAB  &trans  &kp F12
             >;
         };
@@ -145,30 +120,30 @@
         NUM {
             label = "NUM";
             bindings = <
-&kp N0  &kp N1  &kp N2  &kp N3  &trans  &kp AMPERSAND  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp DOLLAR  &kp BACKSLASH
-&kp EQUAL  &kp N4  &kp N5  &kp N6  &trans  &kp PERCENT  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LESS_THAN  &kp GREATER_THAN
-&trans  &kp N7  &kp N8  &kp N9  &trans  &kp QUESTION  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES
-&trans  &trans  &trans  &kp LSHFT  &trans  &trans  &kp COLON  &kp SEMICOLON  &kp DOT  &kp PIPE
+&kp N0   &kp N1  &kp N2  &kp N3     &kp MINUS  &kp ASTERISK  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR        &kp BACKSLASH
+&kp DOT  &kp N4  &kp N5  &kp N6     &kp PLUS   &kp SLASH     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LESS_THAN     &kp GREATER_THAN
+&trans   &kp N7  &kp N8  &kp N9     &kp EQUAL  &kp QUESTION  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES
+&trans   &trans  &trans  &kp LSHFT  &trans     &trans        &mt RSHFT COLON       &kp SEMICOLON          &kp DOT           &kp PIPE
             >;
         };
 
         ARROW {
             label = "ARROW";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &kp LC(LS(TAB))  &kp UP_ARROW  &kp LC(TAB)  &trans
-&trans  &trans  &trans  &trans  &trans  &kp LG(LEFT_ARROW)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp LG(RIGHT_ARROW)
-&kp LS(LG(S))  &trans  &trans  &trans  &trans  &trans  &kp LA(LEFT_ARROW)  &trans  &kp LA(RIGHT_ARROW)  &kp LG(W)
-&kp LS(DELETE)  &trans  &trans  &kp LS(LC(LESS_THAN))  &kp LS(LC(KP_SLASH))  &mt LEFT_SHIFT LS(LC(GREATER_THAN))  &trans  &trans  &trans  &kp LS(LG(T))
+&trans          &trans  &trans  &trans                 &trans                &trans                               &kp LC(LS(TAB))     &kp UP_ARROW    &kp LC(TAB)          &trans
+&trans          &trans  &trans  &trans                 &trans                &kp LG(LEFT_ARROW)                   &kp LEFT_ARROW      &kp DOWN_ARROW  &kp RIGHT            &kp LG(RIGHT_ARROW)
+&kp LS(LG(S))   &trans  &trans  &trans                 &trans                &trans                               &kp LA(LEFT_ARROW)  &trans          &kp LA(RIGHT_ARROW)  &kp LG(W)
+&kp LS(DELETE)  &trans  &trans  &kp LS(LC(LESS_THAN))  &kp LS(LC(KP_SLASH))  &mt LEFT_SHIFT LS(LC(GREATER_THAN))  &trans              &trans          &trans               &kp LS(LG(T))
             >;
         };
 
         MOUSE {
             label = "AUTO_MOUSE";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp LSHFT  &trans  &kp LGUI  &kp LALT  &to 0  &trans  &trans  &trans  &to 0  &kp RALT
+&trans     &trans  &trans    &trans    &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
+&trans     &trans  &trans    &trans    &trans  &trans  &trans    &trans    &trans    &trans
+&trans     &trans  &trans    &trans    &trans  &trans  &trans    &trans    &trans    &trans
+&kp LSHFT  &trans  &kp LGUI  &kp LALT  &to 0   &trans  &trans    &trans    &to 0     &kp RALT
             >;
         };
 
@@ -176,7 +151,7 @@
             label = "SCROLL";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kt LEFT_CONTROL  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
@@ -185,10 +160,10 @@
         layer_6 {
             label = "SETTINGS";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans  &trans  &trans  &trans  &bt BT_CLR
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &bootloader  &bt BT_CLR_ALL
+&trans  &trans        &trans        &trans        &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&trans  &trans        &trans        &trans        &trans  &trans        &trans        &trans        &trans        &trans
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans        &trans        &trans        &trans        &bt BT_CLR
+&trans  &trans        &trans        &trans        &trans  &trans        &trans        &trans        &bootloader   &bt BT_CLR_ALL
             >;
         };
 
@@ -205,40 +180,43 @@
         default_layer_ipad {
             label = "IPAD";
             bindings = <
-&kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P
-&kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &lt 11 L  &kp COMMA
-&kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &mkp MB1  &mkp MB2  &mkp MB3
-&kp LEFT_GUI  &kp LANGUAGE_1  &kp LANGUAGE_2  &kp BACKSPACE  &lt 10 SPACE  &mt LEFT_SHIFT ENTER  &kp LEFT_GUI  &lt 9 SPACE  &kp DOT  &mt LEFT_ALT ESCAPE
+&kp Q         &kp W           &kp E           &kp R          &kp T         &kp Y                 &kp U         &kp I        &kp O     &kp P
+&kp A         &kp S           &kp D           &kp F          &kp G         &kp H                 &kp J         &kp K        &lt 11 L  &kp COMMA
+&kp Z         &kp X           &kp C           &kp V          &kp B         &kp N                 &kp M         &mkp MB1     &mkp MB2  &mkp MB3
+&kp LEFT_GUI  &kp LANGUAGE_1  &kp LANGUAGE_2  &kp BACKSPACE  &lt 10 SPACE  &mt LEFT_SHIFT ENTER  &kp LEFT_GUI  &lt 9 SPACE  &kp DOT   &mt LEFT_ALT ESCAPE
             >;
         };
 
         mouse_layer_ipad {
             label = "IPAD_ARROW";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &kp LS(LG(TAB))  &kp UP_ARROW  &kp LG(TAB)  &trans
-&kp LG(A)  &kp LG(S)  &kp LG(D)  &kp LG(F)  &kp LG(G)  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &trans
-&kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(B)  &trans  &kp LG(LEFT_ARROW)  &trans  &kp LG(RIGHT_ARROW)  &kp LG(W)
-&kp LS(DELETE)  &kp LS(LG(NUMBER_4))  &trans  &kp LS(LC(LESS_THAN))  &kp LS(LC(KP_SLASH))  &mt LEFT_SHIFT LS(LC(GREATER_THAN))  &trans  &trans  &trans  &kp LG(LS(T))
+&trans          &trans                &trans     &trans                 &trans                &trans                               &kp LS(LG(TAB))     &kp UP_ARROW    &kp LG(TAB)          &trans
+&kp LG(A)       &kp LG(S)             &kp LG(D)  &kp LG(F)              &kp LG(G)             &trans                               &kp LEFT_ARROW      &kp DOWN_ARROW  &kp RIGHT            &trans
+&kp LG(Z)       &kp LG(X)             &kp LG(C)  &kp LG(V)              &kp LG(B)             &trans                               &kp LG(LEFT_ARROW)  &trans          &kp LG(RIGHT_ARROW)  &kp LG(W)
+&kp LS(DELETE)  &kp LS(LG(NUMBER_4))  &trans     &kp LS(LC(LESS_THAN))  &kp LS(LC(KP_SLASH))  &mt LEFT_SHIFT LS(LC(GREATER_THAN))  &trans              &trans          &trans               &kp LG(LS(T))
             >;
         };
+
         ipad_num {
             label = "IPAD_NUM";
             bindings = <
-&kp N0  &kp N1  &kp N2  &kp N3  &trans  &kp AMPERSAND  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp DOLLAR  &kp BACKSLASH
-&kp EQUAL  &kp N4  &kp N5  &kp N6  &trans  &kp PERCENT  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LESS_THAN  &kp GREATER_THAN
-&trans  &kp N7  &kp N8  &kp N9  &trans  &kp QUESTION  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES
-&trans  &trans  &trans  &kp LSHFT  &trans  &trans  &kp COLON  &kp SEMICOLON  &kp DOT  &kp PIPE
+&kp N0     &kp N1  &kp N2  &kp N3     &trans  &kp AMPERSAND  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR        &kp BACKSLASH
+&kp EQUAL  &kp N4  &kp N5  &kp N6     &trans  &kp PERCENT    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LESS_THAN     &kp GREATER_THAN
+&trans     &kp N7  &kp N8  &kp N9     &trans  &kp QUESTION   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES
+&trans     &trans  &trans  &kp LSHFT  &trans  &trans         &kp COLON             &kp SEMICOLON          &kp DOT           &kp PIPE
             >;
         };
+
         ipad_scroll {
             label = "IPAD_SCROLL";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kt LEFT_CONTROL  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans
             >;
         };
+
         ipad_function {
             label = "IPAD_FUNCTION";
             bindings = <
@@ -248,22 +226,24 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp F12
             >;
         };
+
         ipad_settings {
             label = "IPAD_SETTINGS";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans  &trans  &trans  &trans  &bt BT_CLR
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &bootloader  &bt BT_CLR_ALL
+&trans  &trans        &trans        &trans        &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&trans  &trans        &trans        &trans        &trans  &trans        &trans        &trans        &trans        &trans
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans        &trans        &trans        &trans        &bt BT_CLR
+&trans  &trans        &trans        &trans        &trans  &trans        &trans        &trans        &bootloader   &bt BT_CLR_ALL
             >;
         };
+
         auto_mouse_ipad {
             label = "IPAD_AUTO_MOUSE";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp LSHFT  &trans  &kp LGUI  &kp LALT  &to 8  &trans  &trans  &trans  &to 8  &kp RALT
+&trans     &trans  &trans    &trans    &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
+&trans     &trans  &trans    &trans    &trans  &trans  &trans    &trans    &trans    &trans
+&trans     &trans  &trans    &trans    &trans  &trans  &trans    &trans    &trans    &trans
+&kp LSHFT  &trans  &kp LGUI  &kp LALT  &to 8   &trans  &trans    &trans    &to 8     &kp RALT
             >;
         };
     };
