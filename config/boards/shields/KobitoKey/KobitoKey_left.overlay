@@ -87,8 +87,17 @@
     status = "okay";
 
     input-processors =
-        <&sensor_rotation_right>,
-        <&zip_temp_layer 4 5000>;
+        <&sensor_rotation_right>;
+
+    auto_mouse_win {
+        layers = <0 4>;
+        input-processors = <&sensor_rotation_right>, <&zip_temp_layer 4 5000>;
+    };
+
+    auto_mouse_ipad {
+        layers = <8 14>;
+        input-processors = <&sensor_rotation_right>, <&zip_temp_layer 14 5000>;
+    };
 
     scroll {
         layers = <5 11>;
@@ -99,5 +108,5 @@
 };
 
 &zip_temp_layer {
-    excluded-positions = <27 28 29>;
+    excluded-positions = <6 7 8 27 28 29 30 32 33 39>;
 };
