@@ -103,7 +103,9 @@
         layers = <5 11>;
         input-processors = <&sensor_rotation_right>,
                            <&zip_xy_to_scroll_mapper>,
-                           <&zip_scroll_scaler 1 15>;
+                           <&zip_scroll_scaler 1 15>,
+                           <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>,
+                           <&zip_scroll_transform INPUT_TRANSFORM_X_INVERT>;
     }; /* オートマウスレイヤーの指定とトラボ操作及びマウスボタン押下後に滞留する時間 */
 };
 
