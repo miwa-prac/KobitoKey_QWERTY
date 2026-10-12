@@ -1,9 +1,16 @@
 include:
  - board: seeeduino_xiao_ble
    shield: KobitoKey_left rgbled_adapter
-   # Diagnostic build: USB CDC logging instead of Studio's USB serial endpoint.
+   # Baseline diagnostic build. Keep this unchanged for A/B comparison.
    snippet: zmk-usb-logging
    artifact-name: KobitoKey_left_ble_debug
+
+ - board: seeeduino_xiao_ble
+   shield: KobitoKey_left rgbled_adapter
+   # Enable keyboard-side passkey input; otherwise identical to baseline.
+   snippet: zmk-usb-logging
+   cmake-args: -DCONFIG_ZMK_BLE_PASSKEY_ENTRY=y
+   artifact-name: KobitoKey_left_ble_passkey_debug
 
  - board: seeeduino_xiao_ble
    shield: KobitoKey_right rgbled_adapter
