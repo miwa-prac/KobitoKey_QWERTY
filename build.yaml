@@ -1,8 +1,10 @@
 include:
  - board: seeeduino_xiao_ble
    shield: KobitoKey_left rgbled_adapter
-   snippet: studio-rpc-usb-uart
-   
+   # Diagnostic build: USB CDC logging instead of Studio's USB serial endpoint.
+   snippet: zmk-usb-logging
+   artifact-name: KobitoKey_left_ble_debug
+
  - board: seeeduino_xiao_ble
    shield: KobitoKey_right rgbled_adapter
 
