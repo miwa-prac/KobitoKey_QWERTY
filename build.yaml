@@ -1,8 +1,24 @@
 include:
  - board: seeeduino_xiao_ble
    shield: KobitoKey_left rgbled_adapter
-   snippet: studio-rpc-usb-uart
-   
+   # Baseline diagnostic build. Keep this unchanged for A/B comparison.
+   snippet: zmk-usb-logging
+   artifact-name: KobitoKey_left_ble_debug
+
+ - board: seeeduino_xiao_ble
+   shield: KobitoKey_left rgbled_adapter
+   # Enable keyboard-side passkey input; otherwise identical to baseline.
+   snippet: zmk-usb-logging
+   cmake-args: -DCONFIG_ZMK_BLE_PASSKEY_ENTRY=y
+   artifact-name: KobitoKey_left_ble_passkey_debug
+
+ - board: seeeduino_xiao_ble
+   shield: KobitoKey_left rgbled_adapter
+   # Isolation build: keep SMP debug, suppress high-volume ZMK scan and BT connection trace.
+   snippet: zmk-usb-logging
+   cmake-args: -DCONFIG_ZMK_BLE_PASSKEY_ENTRY=y -DCONFIG_ZMK_LOGGING_MINIMAL=y -DCONFIG_ZMK_LOG_LEVEL_INF=y -DCONFIG_BT_CONN_LOG_LEVEL_DBG=n -DCONFIG_BT_CONN_LOG_LEVEL_INF=y
+   artifact-name: KobitoKey_left_ble_quiet_passkey_debug
+
  - board: seeeduino_xiao_ble
    shield: KobitoKey_right rgbled_adapter
 
