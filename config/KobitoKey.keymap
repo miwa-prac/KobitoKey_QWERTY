@@ -84,6 +84,24 @@
     };
 
     behaviors {
+        alt_hold_left: alt_hold_left {
+            compatible = "zmk,behavior-hold-tap";
+            label = "ALT_HOLD_LEFT";
+            #binding-cells = <0>;
+            bindings = <&none>, <&kp LEFT_ALT>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+        };
+
+        alt_hold_right: alt_hold_right {
+            compatible = "zmk,behavior-hold-tap";
+            label = "ALT_HOLD_RIGHT";
+            #binding-cells = <0>;
+            bindings = <&none>, <&kp RIGHT_ALT>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+        };
+
         lt_to_layer_0: lt_to_layer_0 {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_TO_0";
@@ -101,9 +119,9 @@
             label = "WIN";
             bindings = <
 &kp Q         &kp W  &kp E          &kp R        &kp T                 &kp Y                   &kp U        &kp I      &kp O    &kp P
-&kp A         &kp S  &kp D          &kp F        &kp G                 &kp H                   &kp J        &kp K      &lt 5 L  &kp MINUS
+&kp A         &mt LEFT_CONTROL S  &kp D          &kp F        &kp G                 &kp H                   &kp J        &kp K      &lt 5 L  &kp MINUS
 &kp Z         &kp X  &kp C          &kp V        &kp B                 &kp N                   &kp M        &kp COMMA  &kp DOT  &kp UNDERSCORE
-&kp LEFT_WIN  &none  &kp BACKSPACE  &lt 2 SPACE  &mt LEFT_SHIFT ENTER  &mt LEFT_CONTROL ENTER  &lt 3 SPACE  &kp TAB    &none    &mt LEFT_ALT ESCAPE
+&kp LEFT_WIN  &kp ESC  &kp BACKSPACE  &lt 2 SPACE  &mt LEFT_SHIFT ENTER  &mt LEFT_CONTROL ENTER  &lt 3 SPACE  &kp TAB    &none    &alt_hold_left
             >;
         };
 
@@ -143,7 +161,7 @@
 &trans     &trans  &trans  &trans    &trans  &trans  &trans  &mkp MB1  &mkp MB2  &trans
 &trans     &trans  &trans  &trans    &trans  &trans  &trans  &trans    &trans    &mkp MB3
 &trans     &trans  &trans  &trans    &trans  &trans  &trans  &trans    &trans    &trans
-&kp LSHFT  &trans  &trans  &kp LALT  &to 0   &trans  &trans  &trans    &to 0     &kp RALT
+&kp LSHFT  &trans  &trans  &lt 2 SPACE  &to 0   &trans  &trans  &trans    &to 0     &alt_hold_right
             >;
         };
 
@@ -181,9 +199,9 @@
             label = "IPAD";
             bindings = <
 &kp Q         &kp W           &kp E           &kp R          &kp T         &kp Y                 &kp U         &kp I        &kp O     &kp P
-&kp A         &kp S           &kp D           &kp F          &kp G         &kp H                 &kp J         &kp K        &lt 11 L  &kp COMMA
+&kp A         &mt LEFT_CONTROL S  &kp D           &kp F          &kp G         &kp H                 &kp J         &kp K        &lt 11 L  &kp COMMA
 &kp Z         &kp X           &kp C           &kp V          &kp B         &kp N                 &kp M         &mkp MB1     &mkp MB2  &mkp MB3
-&kp LEFT_GUI  &kp LANGUAGE_1  &kp LANGUAGE_2  &kp BACKSPACE  &lt 10 SPACE  &mt LEFT_SHIFT ENTER  &kp LEFT_GUI  &lt 9 SPACE  &kp DOT   &mt LEFT_ALT ESCAPE
+&kp LEFT_GUI  &kp LANGUAGE_1  &kp LANGUAGE_2  &kp BACKSPACE  &lt 10 SPACE  &mt LEFT_SHIFT ENTER  &kp LEFT_GUI  &lt 9 SPACE  &kp DOT   &alt_hold_left
             >;
         };
 
@@ -243,7 +261,7 @@
 &trans     &trans  &trans    &trans    &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
 &trans     &trans  &trans    &trans    &trans  &trans  &trans    &trans    &trans    &trans
 &trans     &trans  &trans    &trans    &trans  &trans  &trans    &trans    &trans    &trans
-&kp LSHFT  &trans  &kp LGUI  &kp LALT  &to 8   &trans  &trans    &trans    &to 8     &kp RALT
+&kp LSHFT  &trans  &kp LGUI  &kp LALT  &lt 10 SPACE  &trans  &trans    &trans    &to 8     &alt_hold_right
             >;
         };
     };
