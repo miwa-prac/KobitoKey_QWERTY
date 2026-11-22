@@ -66,8 +66,12 @@
     status = "okay";
     device = <&tb_left>;
 
-    /* 90度回転: ボールを上へ動かすとカーソルが右へ動く。 */
-    input-processors = <&sensor_rotation_left>;
+    /* 90度回転: ボールを上へ動かすと右方向へ横スクロールする。 */
+    input-processors =
+            <&sensor_rotation_left>,
+            <&zip_xy_to_scroll_mapper>,
+            <&zip_scroll_scaler 1 15>,
+            <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>;
     };
 
 / {
