@@ -88,7 +88,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "ALT_HOLD_LEFT";
             #binding-cells = <0>;
-            bindings = <&none>, <&kp LEFT_ALT>;
+            bindings = <&none &kp LEFT_ALT>;
             tapping-term-ms = <200>;
             flavor = "balanced";
         };
@@ -97,7 +97,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "ALT_HOLD_RIGHT";
             #binding-cells = <0>;
-            bindings = <&none>, <&kp RIGHT_ALT>;
+            bindings = <&none &kp RIGHT_ALT>;
             tapping-term-ms = <200>;
             flavor = "balanced";
         };
